@@ -94,22 +94,22 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
               aria-label="Quote topic form"
             >
-              <div className="flex-1">
-                <Input
-                  type="text"
-                  placeholder="Enter a topic"
-                  value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
-                  className="w-full rounded-lg border border-black text-black placeholder-black transition focus:ring-2 focus:ring-black"
-                  disabled={isLoading}
-                  aria-label="Topic input"
-                />
-                {error && (
-                  <p className="mt-2 text-sm text-black" role="alert">
-                    {error}
-                  </p>
-                )}
-              </div>
+              <div className="flex-1 text-black">
+  <Input
+    type="text"
+    placeholder="Enter a topic"
+    value={topic}
+    onChange={(e) => setTopic(e.target.value)}
+    className="w-full rounded-lg border border-black text-black placeholder-black transition focus:ring-2 focus:ring-black"
+    disabled={isLoading}
+    aria-label="Topic input"
+  />
+  {error && (
+    <p className="mt-2 text-sm text-black" role="alert">
+      {error}
+    </p>
+  )}
+</div>
 
               <div className="flex gap-3">
                 <ShinyButton
